@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CHAT BOX</title>
+  <hr><b>CHAT BOX</b></hr>
+</head>
+<body>
+<div class="container">
+  <img src="3af28213ae467106e204ddb60870d62e.jpg" alt="Avatar">
+  <p>Hello. How are you?</p>
+  <span class="time-right">11:00</span>
+</div>
+
+<div class="container darker">
+  <img src="2018_ford_mustang_v8_gt_4k_8k-1366x768.jpg" alt="Avatar" class="right">
+  <p>Hey! I'm fine. What of you?</p>
+  <span class="time-left">11:01</span>
+</div>
+
+<div class="container">
+  <img src="3af28213ae467106e204ddb60870d62e.jpg" alt="Avatar">
+  <p>I am good! So, what do you wanna do today?</p>
+  <span class="time-right">11:02</span>
+</div>
+
+<div class="container darker">
+  <img src="2018_ford_mustang_v8_gt_4k_8k-1366x768.jpg" alt="Avatar" class="right">
+  <p>Nah,go for shopping and later.. learn more coding perhaps?</p>
+  <span class="time-left">11:05</span>
+</div>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <label for="msg"><b> New Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<STYLE>
+  .container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+div class="chat-popup" id="myForm">
+<form action="/action_page.php" class="form-container">
+  <h1>Chat</h1>
+
+  <label for="msg"><b>Message</b></label>
+  <textarea placeholder="Type message.." name="msg" required></textarea>
+
+  <button type="submit" class="btn">Send</button>
+  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+</form>
+</div>
+
+
+{box-sizing: border-box;}
+.open-button {
+background-color: #555;
+color: white;
+padding: 16px 20px;
+border: none;
+cursor: pointer;
+opacity: 0.8;
+position: realative;
+bottom: 23px;
+right: 28px;
+width: 280px;
+}
+.form-popup {
+display: none;
+position: fixed;
+bottom: 0;
+right: 15px;
+border: 3px solid #f1f1f1;
+z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+max-width: 300px;
+padding: 16px 20px;
+background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+width: 425%;
+padding: 15px;
+margin: 5px 0 22px 0;
+border: none;
+background: #f1f1f1;
+resize: relative;
+min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+background-color: #04AA6D;
+color: white;
+padding: 16px 20px;
+border: none;
+cursor: pointer;
+width: 100%;
+margin-bottom:10px;
+opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+background-color: red;
+}
+.form-container .btn:hover, .open-button:hover {
+opacity: 1;
+}
+function openForm() {
+document.getElementById("myForm").style.display = "block";
+}
+</STYLE>
+<script>
+function closeForm() {
+document.getElementById("myForm").style.display = "none";
+}
+</script>
+</body>
+</html>
